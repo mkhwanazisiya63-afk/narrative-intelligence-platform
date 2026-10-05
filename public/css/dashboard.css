@@ -1,0 +1,78 @@
+.dashboard-header{
+
+    margin-bottom:50px;
+
+}
+
+.badge{
+
+    margin:8px;
+
+    display:inline-block;
+
+}
+
+.card{
+
+    min-height:500px;
+
+}
+
+.card h2{
+
+    margin-bottom:25px;
+
+}
+
+#themeList,
+#emotionList,
+#mechanicList,
+#structureList{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+}
+
+.dashboard-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:14px 0;
+
+    border-bottom:1px solid #E5E7EB;
+
+}
+
+.dashboard-row:last-child{
+
+    border-bottom:none;
+
+}
+
+.dashboard-row span{
+
+    font-weight:700;
+
+    color:var(--primary);
+
+}
+
+#recentResearch .card{
+
+    margin-bottom:20px;
+
+}
+
+#progressPanel{
+
+    margin-top:20px;
+
+}

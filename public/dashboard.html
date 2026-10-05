@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Narrative Analytics | Narrative Intelligence Platform
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/main.css"
+    >
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="nav-content">
+
+        <div class="logo">
+            Narrative Intelligence Platform
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">
+                Home
+            </a>
+
+            <a href="/admin">
+                Annotation Studio
+            </a>
+
+            <a href="/taxonomy">
+                Taxonomy
+            </a>
+
+            <a
+                href="/dashboard"
+                class="active"
+            >
+                Analytics
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<main class="container dashboard-page">
+
+    <!-- ======================================
+         HEADER
+    ======================================= -->
+
+    <section class="page-header">
+
+        <span class="hero-badge">
+            Research Analytics
+        </span>
+
+        <h1>
+            Narrative Analytics
+        </h1>
+
+        <p>
+            Explore patterns across the media
+            analysed in the Narrative Intelligence
+            Platform.
+        </p>
+
+    </section>
+
+
+    <!-- ======================================
+         LOADING
+    ======================================= -->
+
+    <div
+        id="dashboardLoading"
+        class="loading-state"
+    >
+
+        Loading analytics...
+
+    </div>
+
+
+    <!-- ======================================
+         ERROR
+    ======================================= -->
+
+    <div
+        id="dashboardError"
+        class="empty-state"
+        style="display:none;"
+    >
+
+        <h3>
+            Unable to load analytics
+        </h3>
+
+        <p>
+            Please refresh the page and try again.
+        </p>
+
+    </div>
+
+
+    <!-- ======================================
+         DASHBOARD CONTENT
+    ======================================= -->
+
+    <div
+        id="dashboardContent"
+        style="display:none;"
+    >
+
+
+        <!-- ==================================
+             STATISTICS
+        =================================== -->
+
+        <section class="analytics-stats">
+
+            <div class="analytics-stat-card">
+
+                <span class="analytics-stat-label">
+                    Total Media
+                </span>
+
+                <strong
+                    id="totalMedia"
+                    class="analytics-stat-number"
+                >
+                    0
+                </strong>
+
+                <span class="analytics-stat-description">
+                    Works in the research library
+                </span>
+
+            </div>
+
+
+            <div class="analytics-stat-card">
+
+                <span class="analytics-stat-label">
+                    Annotated Media
+                </span>
+
+                <strong
+                    id="annotatedMedia"
+                    class="analytics-stat-number"
+                >
+                    0
+                </strong>
+
+                <span class="analytics-stat-description">
+                    Works with narrative annotations
+                </span>
+
+            </div>
+
+
+            <div class="analytics-stat-card">
+
+                <span class="analytics-stat-label">
+                    Research Notes
+                </span>
+
+                <strong
+                    id="researchNotes"
+                    class="analytics-stat-number"
+                >
+                    0
+                </strong>
+
+                <span class="analytics-stat-description">
+                    Analytical observations recorded
+                </span>
+
+            </div>
+
+
+            <div class="analytics-stat-card">
+
+                <span class="analytics-stat-label">
+                    Taxonomy Categories
+                </span>
+
+                <strong
+                    id="taxonomyCount"
+                    class="analytics-stat-number"
+                >
+                    0
+                </strong>
+
+                <span class="analytics-stat-description">
+                    Narrative concepts currently defined
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================
+             MEDIA TYPES
+        =================================== -->
+
+        <section class="analytics-grid">
+
+            <div class="card analytics-card">
+
+                <div class="analytics-card-header">
+
+                    <div>
+
+                        <h2>
+                            Media Library
+                        </h2>
+
+                        <p>
+                            Distribution of analysed media.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div
+                    id="mediaTypeChart"
+                    class="analytics-bars"
+                ></div>
+
+            </div>
+
+
+            <!-- TOP THEMES -->
+
+            <div class="card analytics-card">
+
+                <div class="analytics-card-header">
+
+                    <div>
+
+                        <h2>
+                            Themes
+                        </h2>
+
+                        <p>
+                            Most frequently annotated themes.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div
+                    id="themesChart"
+                    class="analytics-bars"
+                ></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================
+             EMOTIONS + MECHANICS
+        =================================== -->
+
+        <section class="analytics-grid">
+
+            <div class="card analytics-card">
+
+                <div class="analytics-card-header">
+
+                    <div>
+
+                        <h2>
+                            Emotional Patterns
+                        </h2>
+
+                        <p>
+                            Emotional states across the library.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div
+                    id="emotionsChart"
+                    class="analytics-bars"
+                ></div>
+
+            </div>
+
+
+            <div class="card analytics-card">
+
+                <div class="analytics-card-header">
+
+                    <div>
+
+                        <h2>
+                            Game Mechanics
+                        </h2>
+
+                        <p>
+                            Interactive systems represented
+                            in the dataset.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div
+                    id="mechanicsChart"
+                    class="analytics-bars"
+                ></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================
+             STRUCTURES + ARCHETYPES
+        =================================== -->
+
+        <section class="analytics-grid">
+
+            <div class="card analytics-card">
+
+                <div class="analytics-card-header">
+
+                    <div>
+
+                        <h2>
+                            Narrative Structures
+                        </h2>
+
+                        <p>
+                            Structural patterns across the
+                            research library.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div
+                    id="structuresChart"
+                    class="analytics-bars"
+                ></div>
+
+            </div>
+
+
+            <div class="card analytics-card">
+
+                <div class="analytics-card-header">
+
+                    <div>
+
+                        <h2>
+                            Character Archetypes
+                        </h2>
+
+                        <p>
+                            Recurring character patterns.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div
+                    id="archetypesChart"
+                    class="analytics-bars"
+                ></div>
+
+            </div>
+
+        </section>
+
+        <section class="card research-snapshot">
+
+    <div class="analytics-card-header">
+
+        <div>
+
+            <h2>
+                Research Snapshot
+            </h2>
+
+            <p>
+                The most frequently occurring
+                narrative patterns in the current dataset.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="snapshot-grid">
+
+        <div class="snapshot-item">
+
+            <span>
+                Most Common Theme
+            </span>
+
+            <strong id="topTheme">
+                —
+            </strong>
+
+        </div>
+
+
+        <div class="snapshot-item">
+
+            <span>
+                Most Common Emotion
+            </span>
+
+            <strong id="topEmotion">
+                —
+            </strong>
+
+        </div>
+
+
+        <div class="snapshot-item">
+
+            <span>
+                Most Common Mechanic
+            </span>
+
+            <strong id="topMechanic">
+                —
+            </strong>
+
+        </div>
+
+
+        <div class="snapshot-item">
+
+            <span>
+                Dominant Structure
+            </span>
+
+            <strong id="topStructure">
+                —
+            </strong>
+
+        </div>
+
+
+        <div class="snapshot-item">
+
+            <span>
+                Most Common Archetype
+            </span>
+
+            <strong id="topArchetype">
+                —
+            </strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    </div>
+
+</main>
+
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

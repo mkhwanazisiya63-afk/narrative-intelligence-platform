@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Narrative Intelligence Platform</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="stylesheet" href="css/components.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="nav-content">
+
+        <div class="logo">
+
+            Narrative Intelligence Platform
+
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+
+            <a href="/admin">Annotation Studio</a>
+
+            <a href="/taxonomy">Taxonomy</a>
+
+            <a href="/dashboard">Analytics</a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<section class="hero">
+
+    <div class="container">
+
+        <span class="hero-badge">
+
+            Computational Storytelling Research
+
+        </span>
+
+        <h1>
+
+            Discover the Structure Behind Stories
+
+        </h1>
+
+        <p>
+
+            Analyse films, games, television, books and anime through themes,
+            emotions, narrative structures and gameplay mechanics.
+
+        </p>
+
+        <div class="hero-search">
+
+            <input
+                id="searchBox"
+                type="text"
+                placeholder="Search titles, creators or keywords...">
+
+            <button
+                id="searchButton"
+                class="btn btn-primary">
+
+                Search
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="container">
+
+    <div class="grid grid-4">
+
+        <div class="stat-card">
+
+            <h3>Total Media</h3>
+
+            <h1 id="totalMedia">0</h1>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>Themes</h3>
+
+            <h1 id="totalThemes">0</h1>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>Emotions</h3>
+
+            <h1 id="totalEmotions">0</h1>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>Research Notes</h3>
+
+            <h1 id="totalNotes">0</h1>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="container">
+
+    <h2>
+
+        Featured Media
+
+    </h2>
+
+    <div
+        id="featuredMedia"
+        class="grid grid-3">
+
+    </div>
+
+</section>
+
+<section class="container">
+
+    <h2>
+
+        Recently Added
+
+    </h2>
+
+    <div
+        id="recentMedia"
+        class="grid grid-3">
+
+    </div>
+
+</section>
+
+<section class="container">
+
+    <h2>
+
+        Search Results
+
+    </h2>
+
+    <div
+        id="searchResults"
+        class="grid grid-3">
+
+    </div>
+
+</section>
+
+<script src="js/api.js"></script>
+
+<script src="js/ui.js"></script>
+
+<script src="js/home.js"></script>
+
+</body>
+
+</html>

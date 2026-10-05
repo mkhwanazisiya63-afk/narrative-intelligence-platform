@@ -1,0 +1,38 @@
+{
+  "name": "narrative-intelligence-platform",
+  "version": "1.0.0",
+  "description": "A research platform for computational narrative analysis across films, games, television, books and anime.",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "seed": "node seed/taxonomySeed.js",
+    "test": "echo \"No tests specified\""
+  },
+  "keywords": [
+    "narrative",
+    "research",
+    "search-engine",
+    "media-analysis",
+    "sqlite",
+    "express",
+    "film",
+    "games",
+    "storytelling",
+    "computer-science"
+  ],
+  "author": "Siyamthanda Mkhwanazi",
+  "license": "ISC",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "axios": "^1.15.2",
+    "cheerio": "^1.2.0",
+    "express": "^5.2.1",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^6.0.1",
+    "uuid": "^14.0.1"
+  }
+}

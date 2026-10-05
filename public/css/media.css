@@ -1,0 +1,182 @@
+.media-header{
+
+    padding:70px 0;
+
+}
+
+.media-header p{
+
+    margin-top:20px;
+
+    color:var(--text-light);
+
+    max-width:800px;
+
+}
+
+.profile-bar{
+
+    margin-bottom:30px;
+
+}
+
+.profile-bar span{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    font-weight:600;
+
+}
+
+.bar{
+
+    width:100%;
+
+    height:14px;
+
+    background:#E2E8F0;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+}
+
+.fill{
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        var(--primary),
+
+        var(--accent)
+
+    );
+
+    border-radius:999px;
+
+}
+
+#themes,
+#emotions,
+#mechanics,
+#structures{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+}
+
+#researchNotes{
+
+    line-height:1.8;
+
+}
+
+#relatedMedia{
+
+    margin-top:25px;
+
+}
+
+#researchNotes .card{
+
+    margin-bottom:20px;
+
+}
+
+#researchNotes h3{
+
+    margin-bottom:12px;
+
+}
+
+.badge{
+
+    transition:.25s;
+
+}
+
+.badge:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.profile-bar{
+
+    animation:fadeBar .6s ease;
+
+}
+
+@keyframes fadeBar{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+.media-card{
+
+    height:100%;
+
+}
+
+.media-card button{
+
+    margin-top:auto;
+
+}
+
+.media-card .badge{
+
+    background:#DBEAFE;
+
+    color:#1D4ED8;
+
+    font-weight:700;
+
+}
+
+.media-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.media-card strong{
+
+    color:var(--primary);
+
+    font-size:1.05rem;
+
+}
+
+.media-card .profile-bar{
+
+    margin-top:20px;
+
+}

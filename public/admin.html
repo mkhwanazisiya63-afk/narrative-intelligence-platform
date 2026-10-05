@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Annotation Studio | Narrative Intelligence Platform</title>
+
+    <link
+        rel="stylesheet"
+        href="css/main.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/components.css"
+    >
+
+</head>
+
+<body>
+
+<!-- ==========================================
+     NAVIGATION
+========================================== -->
+
+<nav class="navbar">
+
+    <div class="nav-content">
+
+        <div class="logo">
+
+            Narrative Intelligence Platform
+
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+
+            <a
+                href="/admin"
+                class="active"
+            >
+                Annotation Studio
+            </a>
+
+            <a href="/taxonomy">
+                Taxonomy
+            </a>
+
+            <a href="/dashboard">
+                Analytics
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- ==========================================
+     MAIN
+========================================== -->
+
+<main class="container">
+
+    <!-- HEADER -->
+
+    <section class="page-header">
+
+        <span class="hero-badge">
+
+            Research Workspace
+
+        </span>
+
+        <h1>
+
+            Annotation Studio
+
+        </h1>
+
+        <p>
+
+            Add and manage the media that form the
+            foundation of your narrative research library.
+
+        </p>
+
+    </section>
+
+
+    <!-- ==========================================
+         MESSAGE
+    ========================================== -->
+
+    <div
+        id="adminMessage"
+        class="admin-message"
+    ></div>
+
+
+    <!-- ==========================================
+         ADD MEDIA
+    ========================================== -->
+
+    <section class="card">
+
+        <div class="section-heading">
+
+            <div>
+
+                <h2>
+
+                    Add Media
+
+                </h2>
+
+                <p>
+
+                    Create a new entry in your research library.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <form id="mediaForm">
+
+
+            <!-- TITLE -->
+
+            <div class="form-group">
+
+                <label for="title">
+
+                    Title
+
+                </label>
+
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="e.g. Silent Hill 2"
+                    required
+                >
+
+            </div>
+
+
+            <!-- MEDIA TYPE -->
+
+            <div class="form-group">
+
+                <label for="mediaType">
+
+                    Media Type
+
+                </label>
+
+                <select id="mediaType">
+
+                    <option value="Game">
+                        Game
+                    </option>
+
+                    <option value="Movie">
+                        Movie
+                    </option>
+
+                    <option value="TV Series">
+                        TV Series
+                    </option>
+
+                    <option value="Book">
+                        Book
+                    </option>
+
+                    <option value="Anime">
+                        Anime
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- CREATOR -->
+
+            <div class="form-group">
+
+                <label for="creator">
+
+                    Creator
+
+                </label>
+
+                <input
+                    type="text"
+                    id="creator"
+                    placeholder="Director, developer, author, etc."
+                >
+
+            </div>
+
+
+            <!-- YEAR -->
+
+            <div class="form-group">
+
+                <label for="year">
+
+                    Release Year
+
+                </label>
+
+                <input
+                    type="number"
+                    id="year"
+                    placeholder="e.g. 2001"
+                    min="1800"
+                    max="2100"
+                >
+
+            </div>
+
+
+            <!-- DESCRIPTION -->
+
+            <div class="form-group">
+
+                <label for="description">
+
+                    Description
+
+                </label>
+
+                <textarea
+                    id="description"
+                    placeholder="Brief description of the work..."
+                    rows="6"
+                ></textarea>
+
+            </div>
+
+
+            <!-- BUTTON -->
+
+            <button
+                type="submit"
+                class="btn btn-primary"
+            >
+
+                Save Media
+
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- ==========================================
+         MEDIA LIBRARY
+    ========================================== -->
+
+    <section>
+
+        <div class="section-heading">
+
+            <div>
+
+                <h2>
+
+                    Research Library
+
+                </h2>
+
+                <p>
+
+                    Media currently available for analysis.
+
+                </p>
+
+            </div>
+
+            <span
+                id="mediaCount"
+                class="badge"
+            >
+
+                0 items
+
+            </span>
+
+        </div>
+
+
+        <div
+            id="mediaList"
+            class="grid grid-2"
+        >
+
+            <div class="loading-state">
+
+                Loading research library...
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- ==========================================
+     JAVASCRIPT
+========================================== -->
+
+<script src="js/api.js"></script>
+
+<script src="js/ui.js"></script>
+
+<script src="js/admin.js"></script>
+
+</body>
+
+</html>

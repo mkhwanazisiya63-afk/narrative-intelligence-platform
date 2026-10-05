@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Taxonomy | Narrative Intelligence Platform</title>
+
+    <link
+        rel="stylesheet"
+        href="css/main.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/components.css"
+    >
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="nav-content">
+
+        <div class="logo">
+            Narrative Intelligence Platform
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">
+                Home
+            </a>
+
+            <a href="/admin">
+                Annotation Studio
+            </a>
+
+            <a
+                href="/taxonomy"
+                class="active"
+            >
+                Taxonomy
+            </a>
+
+            <a href="/dashboard">
+                Analytics
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<main class="container">
+
+    <section class="page-header">
+
+        <span class="hero-badge">
+            Research Framework
+        </span>
+
+        <h1>
+            Narrative Taxonomy
+        </h1>
+
+        <p>
+            Define the concepts used to analyse
+            narrative and interactive experiences.
+        </p>
+
+    </section>
+
+
+    <div
+        id="taxonomyMessage"
+        class="admin-message"
+    ></div>
+
+
+    <section class="taxonomy-admin-grid">
+
+
+        <!-- THEMES -->
+
+        <div class="card taxonomy-admin-card">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>Themes</h2>
+
+                    <p>
+                        Recurring ideas and subjects.
+                    </p>
+
+                </div>
+
+                <span
+                    id="themesCount"
+                    class="badge"
+                >
+                    0
+                </span>
+
+            </div>
+
+            <form
+                class="taxonomy-form"
+                data-type="themes"
+            >
+
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="e.g. Identity"
+                    required
+                >
+
+                <input
+                    type="text"
+                    name="description"
+                    placeholder="Description"
+                >
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                >
+                    Add Theme
+                </button>
+
+            </form>
+
+            <div
+                id="themesList"
+                class="taxonomy-list"
+            ></div>
+
+        </div>
+
+
+        <!-- EMOTIONS -->
+
+        <div class="card taxonomy-admin-card">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>Emotions</h2>
+
+                    <p>
+                        Emotional states and experiences.
+                    </p>
+
+                </div>
+
+                <span
+                    id="emotionsCount"
+                    class="badge"
+                >
+                    0
+                </span>
+
+            </div>
+
+            <form
+                class="taxonomy-form"
+                data-type="emotions"
+            >
+
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="e.g. Anxiety"
+                    required
+                >
+
+                <input
+                    type="text"
+                    name="description"
+                    placeholder="Description"
+                >
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                >
+                    Add Emotion
+                </button>
+
+            </form>
+
+            <div
+                id="emotionsList"
+                class="taxonomy-list"
+            ></div>
+
+        </div>
+
+
+        <!-- MECHANICS -->
+
+        <div class="card taxonomy-admin-card">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>Mechanics</h2>
+
+                    <p>
+                        Interactive systems and gameplay
+                        mechanics.
+                    </p>
+
+                </div>
+
+                <span
+                    id="mechanicsCount"
+                    class="badge"
+                >
+                    0
+                </span>
+
+            </div>
+
+            <form
+                class="taxonomy-form"
+                data-type="mechanics"
+            >
+
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="e.g. Resource Management"
+                    required
+                >
+
+                <input
+                    type="text"
+                    name="description"
+                    placeholder="Description"
+                >
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                >
+                    Add Mechanic
+                </button>
+
+            </form>
+
+            <div
+                id="mechanicsList"
+                class="taxonomy-list"
+            ></div>
+
+        </div>
+
+
+        <!-- STRUCTURES -->
+
+        <div class="card taxonomy-admin-card">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>Narrative Structures</h2>
+
+                    <p>
+                        Structural approaches to storytelling.
+                    </p>
+
+                </div>
+
+                <span
+                    id="structuresCount"
+                    class="badge"
+                >
+                    0
+                </span>
+
+            </div>
+
+            <form
+                class="taxonomy-form"
+                data-type="structures"
+            >
+
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="e.g. Three-Act Structure"
+                    required
+                >
+
+                <input
+                    type="text"
+                    name="description"
+                    placeholder="Description"
+                >
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                >
+                    Add Structure
+                </button>
+
+            </form>
+
+            <div
+                id="structuresList"
+                class="taxonomy-list"
+            ></div>
+
+        </div>
+
+
+        <!-- ARCHETYPES -->
+
+        <div class="card taxonomy-admin-card">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>Character Archetypes</h2>
+
+                    <p>
+                        Recurring character patterns.
+                    </p>
+
+                </div>
+
+                <span
+                    id="archetypesCount"
+                    class="badge"
+                >
+                    0
+                </span>
+
+            </div>
+
+            <form
+                class="taxonomy-form"
+                data-type="archetypes"
+            >
+
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="e.g. Mentor"
+                    required
+                >
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                >
+                    Add Archetype
+                </button>
+
+            </form>
+
+            <div
+                id="archetypesList"
+                class="taxonomy-list"
+            ></div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="js/taxonomy.js"></script>
+
+</body>
+
+</html>

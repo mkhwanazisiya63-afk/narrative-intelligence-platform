@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Media Analysis | Narrative Intelligence Platform</title>
+
+    <link
+        rel="stylesheet"
+        href="css/main.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/components.css"
+    >
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="nav-content">
+
+        <div class="logo">
+
+            Narrative Intelligence Platform
+
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+
+            <a href="/admin">
+                Annotation Studio
+            </a>
+
+            <a href="/taxonomy">
+                Taxonomy
+            </a>
+
+            <a href="/dashboard">
+                Analytics
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<main class="container">
+
+    <!-- ======================================
+         MEDIA HEADER
+    ======================================= -->
+
+    <section
+        id="mediaHeader"
+        class="page-header"
+    >
+
+        <div class="loading-state">
+
+            Loading media...
+
+        </div>
+
+    </section>
+
+
+    <!-- ======================================
+         ANNOTATION MESSAGE
+    ======================================= -->
+
+    <div
+        id="annotationMessage"
+        class="admin-message"
+    ></div>
+
+
+    <!-- ======================================
+         ANNOTATIONS
+    ======================================= -->
+
+    <section class="annotation-layout">
+
+
+        <!-- THEMES -->
+
+        <div class="card annotation-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>
+                        Themes
+                    </h2>
+
+                    <p>
+                        What ideas or subjects does this
+                        work explore?
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div
+                id="themesContainer"
+                class="taxonomy-options"
+            ></div>
+
+        </div>
+
+
+        <!-- EMOTIONS -->
+
+        <div class="card annotation-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>
+                        Emotions
+                    </h2>
+
+                    <p>
+                        What emotional experiences are
+                        central to the work?
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div
+                id="emotionsContainer"
+                class="taxonomy-options"
+            ></div>
+
+        </div>
+
+
+        <!-- MECHANICS -->
+
+        <div class="card annotation-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>
+                        Mechanics
+                    </h2>
+
+                    <p>
+                        What gameplay or interaction
+                        systems shape the experience?
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div
+                id="mechanicsContainer"
+                class="taxonomy-options"
+            ></div>
+
+        </div>
+
+
+        <!-- STRUCTURES -->
+
+        <div class="card annotation-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>
+                        Narrative Structures
+                    </h2>
+
+                    <p>
+                        How is the story structured?
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div
+                id="structuresContainer"
+                class="taxonomy-options"
+            ></div>
+
+        </div>
+
+
+        <!-- ARCHETYPES -->
+
+        <div class="card annotation-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>
+                        Character Archetypes
+                    </h2>
+
+                    <p>
+                        Which recurring character patterns
+                        are present?
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div
+                id="archetypesContainer"
+                class="taxonomy-options"
+            ></div>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- ======================================
+         SAVE
+    ======================================= -->
+
+    <section class="annotation-save">
+
+        <button
+            id="saveAnnotations"
+            class="btn btn-primary"
+        >
+
+            Save Analysis
+
+        </button>
+
+    </section>
+
+    <!-- ======================================
+     RESEARCH NOTES
+====================================== -->
+
+<section class="research-notes-section">
+
+    <div class="section-heading">
+
+        <div>
+
+            <h2>
+                Research Notes
+            </h2>
+
+            <p>
+                Record observations, interpretations,
+                and analytical findings.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ADD NOTE -->
+
+    <div class="card research-note-form-card">
+
+        <form id="researchNoteForm">
+
+            <div class="form-group">
+
+                <label for="noteTitle">
+
+                    Note Title
+
+                </label>
+
+                <input
+                    type="text"
+                    id="noteTitle"
+                    placeholder="e.g. Emotional framing through repetition"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="noteContent">
+
+                    Research Note
+
+                </label>
+
+                <textarea
+                    id="noteContent"
+                    rows="7"
+                    placeholder="Write your observation or analysis..."
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="btn btn-primary"
+            >
+
+                Save Research Note
+
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <!-- NOTES -->
+
+    <div
+        id="researchNotes"
+        class="research-notes-list"
+    >
+
+        <div class="loading-state">
+
+            Loading research notes...
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- ======================================
+         RELATED MEDIA
+    ======================================= -->
+
+    <section>
+
+        <div class="section-heading">
+
+            <div>
+
+                <h2>
+                    Related Works
+                </h2>
+
+                <p>
+                    Works that share narrative
+                    characteristics with this one.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div
+            id="relatedMedia"
+            class="grid grid-2"
+        >
+
+            <div class="loading-state">
+
+                Save some annotations to discover
+                related works.
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="js/api.js"></script>
+
+<script src="js/ui.js"></script>
+
+<script src="js/media.js"></script>
+
+</body>
+
+</html>
